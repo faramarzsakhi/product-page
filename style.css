@@ -1,0 +1,52 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  .dropdown-width{
+    width: 300px;
+  }
+  .cart-img{
+    width: 60px;
+  }
+  .d-icon{
+    width:15px;
+  }
+  #carousel{
+    max-width: 500px  ;
+  }
+  #quantity{
+    max-width: 60px;
+  }
+  .quantity-left-minus{
+    width: auto;
+  }
+  .quantity-right-plus{
+    width: 3px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* custom styles */
+  .bg-orange{
+    background: hsl(26, 100%, 55%) !important
+  }
+  .bg-pale-orange{
+    background-color: hsl(25, 100%, 94%)
+  }
+  .text-color-orange{
+    color: hsl(26, 100%, 55%) !important
+    
+  }

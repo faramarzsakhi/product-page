@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+
+</head>
+
+<body>
+  <!-- navbar            -->
+  <nav class="navbar navbar-expand-lg bg-white p-0">
+    <div class="container d-flex justify-content-start align-items-center border-bottom border-secondary-subtle ">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasItems"
+        aria-controls="offcanvasItems"><img src="images/icon-menu.svg" alt="menu">
+      </button>
+
+      <div class="navbar-brand mx-2 mb-lg-3">
+        <a href="#" class=""><img src="images/logo.svg" alt="logo"></a>
+      </div>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasItems" aria-labelledby="offcanvasItemsLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <ul class="navbar-nav me-auto mb-2 p-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Collections</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Men</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Women</a>
+              </li>
+
+              <li class="nav-item  ">
+                <a class="nav-link hover" href="#"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">Contact</a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item d-flex flex-row align-items-center ms-auto">
+
+
+        <div class="nav-link ms-lg-auto ">
+          <div class="badge rounded-pill bg-orange text-white position-absolute  top-0 " id="cart-num">0</div>
+          <button type="button" id="shoppingCart" class=" border-0 bg-transparent" data-bs-toggle="modal"
+            data-bs-target="#cart">
+            <img src="images/icon-cart.svg" alt="cart" role="button" class="">
+          </button>
+
+        </div>
+        <div class="nav-link">
+          <button type="button" id="avatarBtn" class=" border-0 bg-transparent d-flex">
+            <img src="images/image-avatar.png" alt="avatar" class="rounded-circle img-thumbnail img-fluid w-50 ms-auto">
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+  </nav>
+  <!-- modal -->
+  <div class="modal fade  modal-dialog-scrollable modal-fullscreen-sm-down" id="cart" tabindex="-1"
+    aria-labelledby="cart" aria-hidden="true">
+    <div class="modal-dialog  ">
+      <div class="modal-content rounded rounded-3 ">
+        <div class="modal-header  ">
+          <h1 class="modal-title fs-5   " id="exampleModalLabel ">Cart</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex  flex-column ">
+          <!-- <div class="d-flex my-3">
+            <div class="visually-hidden" id="isCartEmpty">Your cart is empty</div>
+            <div class="d-flex"><img src="images/image-product-1-thumbnail.jpg" alt="product1"
+                class="img-fluid cart-img rounded">
+              <div class="d-flex flex-column  justify-content-center mx-2">
+
+                <span class="text-secondary-emphasis">Fall Limited Edition Sneakers</span>
+                <span>$125.00 x3 <span class="fw-bold">$375.00</span></span>
+
+              </div>
+
+            </div>
+            <div role="button" class="remove border-0 bg-transparent ms-auto">
+              <img src="images/icon-delete.svg" alt="delete" class="d-icon">
+            </div>
+          </div> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn text-white w-100 p-2 bg-orange" id="checkout">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- main body row  and col section -->
+  <div class="container mt-3 row mx-auto  text-center">
+
+    <div class="col-12 col-lg-6 ">
+      <!-- Main carousel -->
+      <div id="carousel" class="carousel slide w-100">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner roudned rounded-3 " role="button" data-bs-target="#sliderModal"
+          data-bs-toggle="modal">
+          <div class="carousel-item active">
+            <img src="images/image-product-1.jpg" class="d-block w-100" alt="product1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/image-product-2.jpg" class="d-block w-100" alt="product2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/image-product-3.jpg" class="d-block w-100" alt="product3">
+          </div>
+          <div class="carousel-item">
+            <img src="images/image-product-4.jpg" class="d-block w-100" alt="product4">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- carousel fullscreen modal -->
+      <div class="modal fade  modal-fullscreen modal-lg" id="sliderModal" tabindex="-1" aria-labelledby="cart"
+        aria-hidden="true">
+        <div class="modal-dialog  ">
+          <div class="modal-content rounded rounded-3 bg-transparent ">
+            <div class="modal-header  ">
+              <button type="button" class=" bg-transparent " data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/icon-close.svg" alt="close"></button>
+            </div>
+            <div class="modal-body d-flex  ">
+              <div id="carouselm" class="carousel slide ">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselm" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselm" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselm" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselm" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner roudned rounded-3 ">
+                  <div class="carousel-item active">
+                    <img src="images/image-product-1.jpg" class="d-block w-100" alt="product1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/image-product-2.jpg" class="d-block w-100" alt="product2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/image-product-3.jpg" class="d-block w-100" alt="product3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/image-product-4.jpg" class="d-block w-100" alt="product4">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselm" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselm" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 d-flex flex-column align-items-start p-3 p-lg-1 ">
+      <span class="text-color-orange small font-monospace fw-semibold"> SNEAKER COMPANY</span>
+      <h3>Fall Limited Edition Sneakers</h3>
+      <p class="text-start mt-1 mt-lg-5 text-secondary">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div class="d-flex w-100 flex-lg-column align-items-lg-start align-items-center justify-content-between">
+        <div>
+          <span class="price fs-2 fw-bold me-4">$125.00</span>
+          <span class="rounded bg-pale-orange off text-color-orange fw-bolder h-75">50%</span>
+        </div>
+        <div>
+          <span class="pastPrice text-decoration-line-through text-secondary ms-auto">$250</span>
+        </div>
+      </div>
+
+
+
+
+      <div class="row container w-100 mt-4 align-items-center">
+        <div class=" col-5  d-flex align-items-center justify-content-evenly bg-secondary-subtle  rounded ">
+          <button type="button" class="quantity-left-minus border-0 bg-transparent " data-type="minus" data-field="">
+            <img src="images/icon-minus.svg" alt="minus">
+          </button>
+
+          <input type="text" id="quantity" name="quantity" class="form-control  input-number" value="0" min="0"
+            max="100">
+
+          <button type="button" class="quantity-right-plus btn border-0 bg-transparent btn-number" data-type="plus"
+            data-field="">
+            <img src="images/icon-plus.svg" alt="plus">
+
+        </div>
+        <div class="col-7">
+          <button type="button" id="addToCart" class="w-75 rounded p-1 border-0 bg-orange text-white"> <img
+              src="images/icon-cart.svg" alt=""> Add to cart</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- 
+ 
+
+  
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Faramarz sakhi</a>.
+  </div>
+  <script src="script.js"></script>
+  <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
