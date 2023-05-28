@@ -58,18 +58,19 @@
       <div class="nav-item d-flex flex-row align-items-center ms-auto">
 
 
-        <div class="nav-link ms-lg-auto ">
-          <div class="badge rounded-pill bg-orange text-white position-absolute  top-0 " id="cart-num">0</div>
-          <button type="button" id="shoppingCart" class=" border-0 bg-transparent" data-bs-toggle="modal"
+        <div class="nav-link ms-lg-auto  position-relative w-50 mx-2">
+          <div class="badge rounded-pill bg-orange text-white position-absolute  top-0 end-0 " id="cart-num">0
+          </div>
+            
+          <button type="button" id="shoppingCart" class=" border-0 bg-transparent " data-bs-toggle="modal"
             data-bs-target="#cart">
             <img src="images/icon-cart.svg" alt="cart" role="button" class="">
           </button>
 
         </div>
-        <div class="nav-link">
-          <button type="button" id="avatarBtn" class=" border-0 bg-transparent d-flex">
-            <img src="images/image-avatar.png" alt="avatar" class="rounded-circle img-thumbnail img-fluid w-50 ms-auto">
-          </button>
+        <div class="" role="button" id="avatarDiv">
+            <img src="images/image-avatar.png" alt="avatar" class="rounded-circle img-thumbnail img-fluid ms-auto">
+          
         </div>
       </div>
 
@@ -196,7 +197,7 @@
         </div>
       </div>
     </div>
-
+<!-- secod column product specs -->
     <div class="col-12 col-lg-6 d-flex flex-column align-items-start p-3 p-lg-1 ">
       <span class="text-color-orange small font-monospace fw-semibold"> SNEAKER COMPANY</span>
       <h3>Fall Limited Edition Sneakers</h3>
@@ -217,8 +218,8 @@
 
 
 
-      <div class="row container w-100 mt-4 align-items-center">
-        <div class=" col-5  d-flex align-items-center justify-content-evenly bg-secondary-subtle  rounded ">
+      <div class="d-flex container w-100 mt-4 mx-auto  align-items-center">
+        <div class=" d-flex align-items-center w-50 justify-content-evenly bg-secondary-subtle  rounded ">
           <button type="button" class="quantity-left-minus border-0 bg-transparent " data-type="minus" data-field="">
             <img src="images/icon-minus.svg" alt="minus">
           </button>
@@ -231,7 +232,7 @@
             <img src="images/icon-plus.svg" alt="plus">
 
         </div>
-        <div class="col-7">
+        <div class="w-50">
           <button type="button" id="addToCart" class="w-75 rounded p-1 border-0 bg-orange text-white"> <img
               src="images/icon-cart.svg" alt=""> Add to cart</button>
         </div>
