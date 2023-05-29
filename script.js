@@ -5,6 +5,7 @@ let cartNum = document.getElementById("cart-num");
 let quantity = document.getElementById("quantity");
 let cartBody = document.querySelector(".modal-body");
 let addToCart =document.getElementById("addToCart");
+
 let quantityNumber=0;
 const cart = [];
 const productsArr =[
@@ -15,7 +16,7 @@ const productsArr =[
 
     }
 ];
-
+cartRefresh()
 // function addProduct(pObject, quantity){
 //     cartBody.innerHTML = ` <div class="d-flex my-3">
     
@@ -38,8 +39,7 @@ function cartRefresh(){
 
     cartNum.innerHTML = quantityNumber;
     if(quantityNumber==0){
-        cartBody.innerHTML=`    <div class="" id="isCartEmpty">Your cart is empty</div>
-        `
+        cartBody.innerHTML=`    <div class="" id="isCartEmpty">Your cart is empty</div>`
         
     }else{
     cartBody.innerHTML = ` <div class="d-flex my-3">
@@ -53,15 +53,20 @@ function cartRefresh(){
      </div>
 
     </div>
-     <div role="button" class="remove border-0 bg-transparent ms-auto">
+     <div role="button" class="remove border-0 bg-transparent ms-auto" onclick="cartRemove()">
        <img src="images/icon-delete.svg" alt="delete" class="d-icon">
     </div>
    </div>`;
     }
     // addProduct(cart[0] , quantityNumber);
-
-    
 }
+function cartRemove(){
+quantity.value--;
+quantityNumber--;
+cartRefresh();
+
+}
+    
 
 plusBtn.addEventListener('click',()=>{
     if(quantityNumber <=100){
@@ -82,5 +87,3 @@ addToCart.addEventListener('click',()=>{
     cartRefresh();
 }
 )
-
-    
