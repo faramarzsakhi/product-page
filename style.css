@@ -1,54 +1,61 @@
 .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
+  font-size: 11px;
+  text-align: center;
+}
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
-  .dropdown-width{
-    width: 300px;
-  }
-  .cart-img{
-    width: 60px;
-  }
-  .d-icon{
-    width:15px;
-  }
-  #carousel{
-    max-width: 500px  ;
-  }
-  #quantity{
-    max-width: 60px;
-  }
-  .quantity-left-minus{
-    width: auto;
-  }
-  .quantity-right-plus{
-    width: 3px;
-  }
-#avatarDiv{
+.dropdown-width {
+  width: 300px;
+}
+
+.cart-img {
   width: 60px;
 }
 
+.d-icon {
+  width: 15px;
+}
 
+#carousel {
+  max-width: 500px;
+}
 
+#quantity {
+  max-width: 60px;
+}
 
+.quantity-left-minus {
+  width: auto;
+}
 
+.quantity-right-plus {
+  width: 3px;
+}
 
+#avatarDiv {
+  width: 60px;
+}
 
+#offcanvasItems > div.offcanvas-body > div > ul {
+  height: 100%;
+}
 
+#offcanvasItems > div.offcanvas-body > div > ul > li:nth-child(1) > a:hover {
+  margin-bottom: 3px orange solid !important;
+}
 
+/* custom styles */
+.bg-orange {
+  background: hsl(26, 100%, 55%) !important;
+}
 
-  /* custom styles */
-  .bg-orange{
-    background: hsl(26, 100%, 55%) !important
-  }
-  .bg-pale-orange{
-    background-color: hsl(25, 100%, 94%)
-  }
-  .text-color-orange{
-    color: hsl(26, 100%, 55%) !important
-    
-  }
+.bg-pale-orange {
+  background-color: hsl(25, 100%, 94%);
+}
+
+.text-color-orange {
+  color: hsl(26, 100%, 55%) !important;
+}/*# sourceMappingURL=style.css.map */
